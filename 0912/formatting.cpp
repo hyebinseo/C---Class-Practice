@@ -16,9 +16,12 @@ int main() {
     double num = 123456789.123456789;
     std::cout << std::setprecision(4) << num << std::endl; // put std::endl as best practice
     std::cout << std::setprecision(4) << std::fixed << num << std::endl; // fixed ensures fixed-point notation // ensure fixed comes before the number
+    std::cout << std::setprecision(4) << std::scientific << num << std::endl; // ensures scientific notation
 
     int score = 5;
-    std::cout << std::setfill('0') << std::setw(8) << score << std::endl; // setfill sets value, setw sets the width
+    std::cout << std::setfill('0') << std::left << std::setw(8) << score << std::endl; // setfill sets value, setw sets the width // 5 at left
+    std::cout << std::setfill('0') << std::right << std::setw(8) << score << std::endl; // 5 at right
+    std::cout << std::setfill('0') << std::internal << std::setw(8) << score << std::endl;
 
     char upletter = 'A'; // ensure std:: string
     char downletter = 'a'; // ensure std:: string // only single quotes for characters
